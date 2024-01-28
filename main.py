@@ -34,7 +34,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def init_ui(self):
         # Load the UI Page
-        self.ui = uic.loadUi('mainwindow.ui', self)
+        self.ui = uic.loadUi('Lightmode.ui', self)
 
         self.addComponent.clicked.connect(self.add_component)
         self.ui.GenerateButton.clicked.connect(self.generate_mixer)
@@ -170,7 +170,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # plotting the interpolated signal in graph2
         self.ui.graph2.setLabel('left', "Amplitude")
         self.ui.graph2.setLabel('bottom', "Time")
-        pen = pg.mkPen(color=(64, 92, 245), width=2)
+        pen = pg.mkPen(color=(86, 140, 249), width=2)
         self.ui.graph2.plot(signal.time, interpolated_data, pen=pen)
 
         # y_min = min(signal.data)
@@ -196,7 +196,7 @@ class MainWindow(QtWidgets.QMainWindow):
             y_data = signal.data
 
         # Plot the mixed waveform
-            pen = pg.mkPen(color=(64, 92, 245), width=2)
+            pen = pg.mkPen(color=(86, 140, 249), width=2)
             self.ui.graph1.plot(x_data, y_data, name=signal.name, pen=pen)
             x_min = min(x_data)
             x_max = max(x_data)
@@ -258,7 +258,7 @@ class MainWindow(QtWidgets.QMainWindow):
             y_data = original_data - signal.interpolated_data
 
         # Plot the mixed waveform
-            pen = pg.mkPen(color=(64, 92, 245), width=2)
+            pen = pg.mkPen(color=(86, 140, 249), width=2)
             self.ui.graph3.plot(x_data, y_data, name=signal.name, pen=pen)
             x_min = min(x_data)
             x_max = max(x_data)
@@ -297,11 +297,11 @@ class MainWindow(QtWidgets.QMainWindow):
         layout = QHBoxLayout()
 
         label = QLabel(text)
-        label.setStyleSheet("color:white")
+        label.setStyleSheet("color:black; background: rgba(74, 74, 74, 0); font-family:opensans;font-weight: 500;")
 
         icon_button = QPushButton()
         # Set the path to your icon file
-        icon_button.setIcon(QIcon("Icons/delete-svgrepo-com.svg"))
+        icon_button.setIcon(QIcon("Icons/delete-svgrepo-com.png"))
         icon_button.setStyleSheet("background-color:transparent")
         icon_button.clicked.connect(
             lambda: self.delete_from_attrList(component))
@@ -350,7 +350,7 @@ class MainWindow(QtWidgets.QMainWindow):
             y_data = self.preparing_signal.data
 
         # Plot the mixed waveform
-            pen = pg.mkPen(color=(64, 92, 245), width=2)
+            pen = pg.mkPen(color=(86, 140, 249), width=2)
             self.ui.graph1.plot(
                 x_data, y_data, name=self.preparing_signal.name, pen=pen)
 
@@ -391,10 +391,10 @@ class MainWindow(QtWidgets.QMainWindow):
         layout = QHBoxLayout()
 
         label = QLabel(text)
-        label.setStyleSheet("color:white")
+        label.setStyleSheet("color:black;background: rgba(74, 74, 74, 0); font-family:opensans;font-weight: 500;")
         icon_button = QPushButton()
         # Set the path to your icon file
-        icon_button.setIcon(QIcon("Icons/delete-svgrepo-com.svg"))
+        icon_button.setIcon(QIcon("Icons/delete-svgrepo-com.png"))
         icon_button.setStyleSheet("background-color:transparent")
         icon_button.clicked.connect(
             lambda: self.delete_from_signalsList(signal))
@@ -453,10 +453,10 @@ class MainWindow(QtWidgets.QMainWindow):
             layout = QHBoxLayout()
 
             label = QLabel(text)
-            label.setStyleSheet("color:white")
+            label.setStyleSheet("color:black; background: rgba(74, 74, 74, 0); font-family:opensans;font-weight: 500;")
             icon_button = QPushButton()
             # Set the path to your icon file
-            icon_button.setIcon(QIcon("Icons/delete-svgrepo-com.svg"))
+            icon_button.setIcon(QIcon("Icons/delete-svgrepo-com.png"))
             icon_button.setStyleSheet("background-color:transparent")
             icon_button.clicked.connect(
                 lambda: self.delete_from_componList(component))

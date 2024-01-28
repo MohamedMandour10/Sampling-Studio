@@ -35,6 +35,11 @@ The core of the application is represented by the `MainWindow` class, which exte
 - **Graphical Visualization**: Signals, reconstructed signals, and error plots are displayed in graphical form using PyQtGraph.
 
 - **Interactive Elements**: Users can interact with the GUI through buttons, sliders, and radio buttons to control various aspects of signal processing and visualization.
+## Demo
+
+
+https://github.com/MohamedMandour10/Sampling-Studio/assets/115044826/e29edee7-b996-44d4-b918-eb997573653b
+
 
 ## Getting Started
 

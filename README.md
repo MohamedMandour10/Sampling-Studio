@@ -36,7 +36,9 @@ The core of the application is represented by the `MainWindow` class, which exte
 
 - **Interactive Elements**: Users can interact with the GUI through buttons, sliders, and radio buttons to control various aspects of signal processing and visualization.
 ## Demo
-
+- **Top Graph**: Original signal
+- **Middle Graph**: Reconstructed signal
+- **Bottom Graph**: Difference error between Original signal and Reconstructed signal
 
 https://github.com/MohamedMandour10/Sampling-Studio/assets/115044826/e29edee7-b996-44d4-b918-eb997573653b
 

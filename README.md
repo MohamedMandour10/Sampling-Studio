@@ -1,4 +1,5 @@
 # Signal Processing and Sampling Application
+![Demo of UI](https://github.com/MohamedMandour10/Sampling-Studio/assets/115044826/50688bed-4c19-46b1-a77e-f32f2f5896f8)
 
 ## Overview
 
